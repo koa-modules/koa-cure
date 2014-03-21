@@ -9,8 +9,19 @@ var koa = request('koa');
 var app = koa();
 var cure = require('koa-cure');
 
-//cure.csrf(app, options);
+// 1.
+app.use(cure({
+  csrf: options
+}));
+
 // or
+
+// 2.
+cure.csrf(app, options);
+
+// or
+
+// 3.
 app.use(cure.csrf(ptions));
 ```
 
@@ -20,4 +31,5 @@ app.use(cure.csrf(ptions));
 
 ### Dependencies
 
+* [koa-compose](https://github.com/koajs/compose)
 * [koa-csrf](https://github.com/koajs/csrf)

@@ -14,6 +14,10 @@ var cure = require('koa-cure');
 app.use(cure.csrf(ptions));
 ```
 
+### API
+
+#### cure.csrf([app, options])
+
 ### Dependencies
 
 * [koa-csrf](https://github.com/koajs/csrf)

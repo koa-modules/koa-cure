@@ -33,3 +33,4 @@ app.use(cure.csrf(ptions));
 
 * [koa-compose](https://github.com/koajs/compose)
 * [koa-csrf](https://github.com/koajs/csrf)
+* [koa-bodyparser](https://github.com/dead-horse/koa-body-parser)

@@ -16,7 +16,8 @@ var cure = module.exports = function (options) {
   // or fn._name = 'cure';
   // return fn;
   return function* cure(next) {
-    yield* fn(next);
+    yield fn;
+    yield* next;
   };
 };
 

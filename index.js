@@ -12,7 +12,12 @@ var cure = module.exports = function (options) {
     });
   }
 
-  return compose(headers);
+  var fn = compose(headers);
+  // or fn._name = 'cure';
+  // return fn;
+  return function* cure(next) {
+    yield* fn(next);
+  };
 };
 
-cure.csrf = require('./lib/csrf')
+cure.csrf = require('./lib/csrf');
